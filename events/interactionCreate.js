@@ -37,12 +37,13 @@ module.exports = {
                 }
             })();
 
+            
+
             try {
                 await command.execute(interaction);
                 console.log(`Выполнена команда /${interaction.commandName} от ${interaction.user.tag}`);
 
                 // Лог использования команды в вебхук
-                const serverName = interaction.guild ? interaction.guild.name + ` (${interaction.guild.id})` : 'Личные сообщения (DM)';
                 const [rows] = await db.query('SELECT * FROM users WHERE user_id = ? AND guild_id = ?',
                     [userId, guildId]
                 );

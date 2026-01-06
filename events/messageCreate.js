@@ -88,7 +88,7 @@ module.exports = {
 
                 // Обновляем БД
                 await db.query(
-                    'UPDATE users SET xp = ?, level = ?, xp_to_next = ?, messages_count = messages_count + 1 WHERE user_id = ? AND guild_id = ?',
+                    'UPDATE users SET xp = ?, level = ?, xp_to_next = ? WHERE user_id = ? AND guild_id = ?',
                     [currentXp, currentLevel, xpToNext, userId, guildId]
                 );
             } catch (error) {
