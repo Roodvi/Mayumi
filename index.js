@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Collection, ChannelType, PermissionsBitField, Partials } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, ChannelType, PermissionsBitField, Partials, EmbedBuilder } = require('discord.js');
 const { token } = require('./config.json');
 const db = require('./db.js');
 const fs = require('node:fs');
@@ -320,6 +320,51 @@ client.on('interactionCreate', async modalInteraction => {
     }
 });
 
+
+client.on('interactionCreate', async interaction => {
+    if (!interaction.isButton()) return;
+
+    if (interaction.customId.startsWith('clear_history_')) {
+        // Проверка прав — только админы могут нажать
+        if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+            return interaction.reply({ content: 'Только администраторы могут очищать историю!', ephemeral: true });
+        }
+
+        const targetUserId = interaction.customId.split('_')[2];
+
+        try {
+            // НЕ снимаем таймаут — только очищаем историю в БД
+            const [result] = await db.query(
+                'DELETE FROM infractions WHERE guild_id = ? AND user_id = ?',
+                [interaction.guild.id, targetUserId]
+            );
+
+            const clearedCount = result.affectedRows;
+
+            const targetMember = await interaction.guild.members.fetch(targetUserId).catch(() => null);
+
+            const successEmbed = new EmbedBuilder()
+                .setColor(0xFF0000)
+                .setTitle('История наказаний очищена')
+                .setDescription(
+                    targetMember
+                        ? `Очищена история пользователя **${targetMember.user.tag}**.\nУдалено записей: **${clearedCount}**.\nТекущий таймаут (если был) остался без изменений.`
+                        : `Очищена история пользователя с ID ${targetUserId}.\nУдалено записей: **${clearedCount}**.`
+                )
+                .setTimestamp();
+
+            // Обновляем оригинальное сообщение
+            await interaction.update({
+                embeds: [successEmbed],
+                components: []
+            });
+
+        } catch (error) {
+            console.error('Ошибка при очистке истории:', error);
+            await interaction.reply({ content: 'Ошибка при очистке истории наказаний.', ephemeral: true });
+        }
+    }
+});
 
 // Рекурсивная функция загрузки команд с категориями
 function loadCommands(dir, category = 'general') {

@@ -84,6 +84,24 @@ module.exports = {
 
                     // Можно добавить уведомление о апе уровня
                     message.channel.send(`Юху ${message.author}, ты повысил новый уровень **${currentLevel}** давай в том-же духе. 🎉`);
+
+                    try {
+                        const [roleRows] = await db.query(
+                            'SELECT role_id FROM guilds WHERE guild_id = ? AND level = ?',
+                            [guildId, currentLevel]
+                        );
+
+                        if (roleRows.length > 0) {
+                            const roleId = roleRows[0].role_id;
+                            const member = await guild.members.fetch(userId);
+                            if (!member.roles.cache.has(roleId)) {
+                                await member.roles.add(roleId);
+                                message.channel.send(`${message.author} получил роль <@&${roleId}> за ${currentLevel} уровень! 🎉`);
+                            }
+                        }
+                    } catch (err) {
+                        console.error('Ошибка выдачи роли:', err);
+                    }
                 }
 
                 // Обновляем БД
