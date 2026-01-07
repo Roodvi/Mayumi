@@ -1,20 +1,19 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    category: 'music',
     data: new SlashCommandBuilder()
         .setName('stop')
-        .setDescription('Остановить музыку и выйти из канала'),
-
+        .setDescription('Остановить музыку и очистить очередь'),
     async execute(interaction) {
-        const queue = interaction.client.player.nodes.get(interaction.guild);
-        if (!queue) {
-            return interaction.reply('Бот не в голосовом канале!');
-        }
+        await interaction.deferReply();
+        const player = interaction.client.riffy.players.get(interaction.guild.id);
+        if (!player) return interaction.followUp('Нет активного плеера!');
 
-        console.log('[LAVALINK] Остановка музыки и выход');
-        queue.delete();  // Полностью удаляет очередь и отключается
+        player.queue.clear();
+        player.destroy();  // Выход из канала
 
-        await interaction.reply('⏹ Музыка остановлена, бот вышел из канала.');
-    },
+        await interaction.followUp({
+            embeds: [new EmbedBuilder().setColor('#1db954').setDescription('Музыка остановлена, очередь очищена ⏹')]
+        });
+    }
 };

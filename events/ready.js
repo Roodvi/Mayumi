@@ -1,8 +1,12 @@
+const colors = require('../UI/colors/colors');
+const { getLavalinkManager } = require('../lavalink.js');
+const config = require("../config.json");
+const { getLang, getLangSync } = require('../utils/languageLoader.js');
+
 module.exports = {
-    name: 'ready',
+    name: "ready",
     once: true,
     execute(client) {
-        console.log(`Бот готов! Залогинен как ${client.user.tag}`);
-        client.user.setActivity('/help', { type: 'LISTENING' });
-    },
+        
+    }
 };

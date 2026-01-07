@@ -1,20 +1,33 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    category: 'music',
     data: new SlashCommandBuilder()
         .setName('skip')
         .setDescription('Пропустить текущий трек'),
-
+    category: 'music',  // Опционально, удали если не используешь категории
     async execute(interaction) {
-        const queue = interaction.client.player.nodes.get(interaction.guild);
-        if (!queue || !queue.isPlaying()) {
-            return interaction.reply('Ничего не играет!');
+        await interaction.deferReply();
+
+        const player = interaction.client.riffy.players.get(interaction.guild.id);
+
+        if (!player || !player.playing) {
+            return interaction.followUp({ content: 'Сейчас ничего не играет!', ephemeral: true });
         }
 
-        console.log('[LAVALINK] Пропуск трека');
-        queue.node.skip();
+        // Проверка, в голосовом ли канал пользователь
+        const voiceChannel = interaction.member.voice.channel;
+        if (!voiceChannel || voiceChannel.id !== player.voiceChannel) {
+            return interaction.followUp({ content: 'Ты должен быть в том же голосовом канале!', ephemeral: true });
+        }
 
-        await interaction.reply('⏭ Трек пропущен!');
-    },
+        // Пропуск трека
+        player.stop();  // В riffy это пропускает к следующему
+
+        await interaction.followUp({
+            embeds: [new EmbedBuilder()
+                .setColor('#1db954')
+                .setDescription('Трек пропущен ⏭')
+            ]
+        });
+    }
 };

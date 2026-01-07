@@ -1,27 +1,37 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
-    category: 'music',
     data: new SlashCommandBuilder()
         .setName('queue')
         .setDescription('Показать текущую очередь'),
-
+    category: 'music',
     async execute(interaction) {
-        const queue = interaction.client.player.nodes.get(interaction.guild);
-        if (!queue || queue.tracks.size === 0) {
-            return interaction.reply('Очередь пуста!');
+        const player = interaction.client.riffy.players.get(interaction.guild.id);
+
+        if (!player || player.queue.length === 0) {
+            return interaction.reply({ content: 'Очередь пуста!', ephemeral: true });
         }
 
-        const tracks = queue.tracks.toArray().slice(0, 15);  // Топ-15
+        const queue = player.queue;
+        const current = player.queue.current;  // Текущий трек
+
+        let queueText = `**Сейчас играет:** ${current.title} (Запросил: <@${current.requester.id}>)\n\n**Очередь:**\n`;
+
+        queue.forEach((track, index) => {
+            queueText += `${index + 1}. **${track.title}** (Запросил: <@${track.requester.id}>)\n`;
+        });
+
+        // Обрезаем, если слишком длинно (лимит Discord ~2000 символов)
+        if (queueText.length > 1900) {
+            queueText = queueText.slice(0, 1900) + '...';
+        }
+
         const embed = new EmbedBuilder()
-            .setColor(0x0099ff)
+            .setColor('#1db954')
             .setTitle('Очередь музыки')
-            .setDescription(
-                `Сейчас играет: **${queue.currentTrack.title}** (${queue.currentTrack.duration})\n\n` +
-                tracks.map((t, i) => `${i + 1}. **${t.title}** (${t.duration}) — ${t.requestedBy?.tag || 'неизвестно'}`).join('\n')
-            )
-            .setFooter({ text: `Всего в очереди: ${queue.tracks.size} треков` });
+            .setDescription(queueText || 'Очередь пуста')
+            .setFooter({ text: `Всего треков: ${queue.length}` });
 
         await interaction.reply({ embeds: [embed] });
-    },
+    }
 };
