@@ -40,6 +40,21 @@ module.exports = {
             await target.timeout(null);
 
             // Ищем последнюю запись мута (не снятую)
+            const [rows] = await db.query(
+                `SELECT id FROM infractions 
+                 WHERE guild_id = ? AND user_id = ? AND type = 'mute' AND removed_at IS NULL 
+                 ORDER BY timestamp DESC LIMIT 1`,
+                [interaction.guild.id, target.id]
+            );
+
+            let updated = false;
+            if (rows.length > 0) {
+                await db.query(
+                    'UPDATE infractions SET removed_by = ?, removed_at = NOW(), removed_reason = ? WHERE id = ?',
+                    [interaction.user.id, reason, rows[0].id]
+                );
+                updated = true;
+            }
 
             const embed = new EmbedBuilder()
                 .setColor(0x00FF00)
@@ -51,6 +66,14 @@ module.exports = {
                 )
                 .setTimestamp();
 
+            if (updated) {
+                embed.addFields({ name: 'Обновлена запись', value: `ID: ${rows[0].id}` });
+            } else {
+                embed.setFooter({ text: 'Активной записи мута не найдено (таймаут снят вручную)' });
+            }
+
+            await interaction.reply({ embeds: [embed] });
+
             try {
                 await target.send({
                     embeds: [new EmbedBuilder()
@@ -59,7 +82,7 @@ module.exports = {
                         .setDescription(`Сервер: **${interaction.guild.name}**\nПричина: ${reason}`)
                         .setTimestamp()]
                 });
-            } catch { }
+            } catch {}
         } catch (error) {
             console.error('Ошибка в /unmute:', error);
             await interaction.reply({ content: 'Ошибка при снятии мута.', ephemeral: true });

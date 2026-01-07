@@ -3,6 +3,7 @@ const { token } = require('./config.json');
 const db = require('./db.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const { Player } = require('discord-player');
 
 const client = new Client({
     intents: [
@@ -22,7 +23,65 @@ const client = new Client({
 
 client.commands = new Collection();
 
-client.voiceTracker = new Map();
+client.player = new Player(client, {
+    lavalink: {
+        nodes: [
+            {
+                host: 'localhost',  // Или IP VPS, если Lavalink на удалённом сервере
+                port: 2333,
+                password: 'youshallnotpass',  // Тот же, что в application.yml
+                secure: false  // true, если используешь HTTPS
+            }
+        ]
+    },
+    ytdlOptions: {
+        quality: 'highestaudio',
+        highWaterMark: 1 << 25
+    }
+});
+
+// Функция с событиями и логами (без extractors!)
+async function loadPlayer() {
+    try {
+        console.log('[LAVALINK] Проверка подключения к Lavalink...');
+
+        // События плеера с детальными логами
+        client.player.events.on('playerStart', (queue, track) => {
+            console.log(`[LAVALINK] ✅ Играет: ${track.title} (${track.duration}) — запросил ${track.requestedBy?.tag || 'неизвестно'}`);
+            queue.metadata.channel.send(`🎶 Играет: **${track.title}** (${track.duration})`);
+        });
+
+        client.player.events.on('empty', (queue) => {
+            console.log('[LAVALINK] Очередь пуста, бот выходит');
+            queue.metadata.channel.send('Очередь закончилась, выхожу 👋');
+        });
+
+        client.player.events.on('connection', (queue) => {
+            console.log('[LAVALINK] Подключено к голосовому каналу');
+        });
+
+        client.player.events.on('disconnect', (queue) => {
+            console.log('[LAVALINK] Отключено от канала');
+        });
+
+        client.player.events.on('error', (queue, error) => {
+            console.error('[LAVALINK] Ошибка очереди:', error);
+            queue.metadata?.channel?.send('Ошибка воспроизведения 😔');
+        });
+
+        client.player.events.on('playerError', (queue, error) => {
+            console.error('[LAVALINK] Ошибка стриминга:', error);
+        });
+
+        console.log('🎵 [LAVALINK] Плеер готов! (extractors не нужны — Lavalink всё обрабатывает)');
+    } catch (error) {
+        console.error('❌ [LAVALINK] Не удалось настроить плеер:', error);
+    }
+}
+
+client.once('ready', async () => {
+    await loadPlayer();
+});
 
 // === ЗАГРУЗКА КОМАНД ===
 
