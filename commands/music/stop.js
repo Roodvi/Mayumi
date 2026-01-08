@@ -1,19 +1,19 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('stop')
-        .setDescription('Остановить музыку и очистить очередь'),
+        .setDescription('Остановить музыку и выйти из канала'),
     async execute(interaction) {
-        await interaction.deferReply();
-        const player = interaction.client.riffy.players.get(interaction.guild.id);
-        if (!player) return interaction.followUp('Нет активного плеера!');
+        const client = interaction.client;
+        const player = client.manager.players.get(interaction.guild.id);
+
+        if (!player) return interaction.reply({ content: 'Ничего не играет!', ephemeral: true });
 
         player.queue.clear();
-        player.destroy();  // Выход из канала
+        player.stop();
+        player.disconnect();
 
-        await interaction.followUp({
-            embeds: [new EmbedBuilder().setColor('#1db954').setDescription('Музыка остановлена, очередь очищена ⏹')]
-        });
+        await interaction.reply('Музыка остановлена, бот вышел из канала ❌');
     }
 };

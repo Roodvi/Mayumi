@@ -1,33 +1,24 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('skip')
-        .setDescription('Пропустить текущий трек'),
-    category: 'music',  // Опционально, удали если не используешь категории
+        .setDescription('Пропустить трек'),
     async execute(interaction) {
-        await interaction.deferReply();
+        const client = interaction.client;
+        const player = client.manager.players.get(interaction.guild.id);
 
-        const player = interaction.client.riffy.players.get(interaction.guild.id);
-
-        if (!player || !player.playing) {
-            return interaction.followUp({ content: 'Сейчас ничего не играет!', ephemeral: true });
+        if (!player) return interaction.reply({ content: 'Ничего не играет!', ephemeral: true });
+        if (!interaction.member.voice.channel || interaction.member.voice.channel.id !== player.voiceChannelId) {
+            return interaction.reply({ content: 'Вы не в том же голосовом канале!', ephemeral: true });
         }
 
-        // Проверка, в голосовом ли канал пользователь
-        const voiceChannel = interaction.member.voice.channel;
-        if (!voiceChannel || voiceChannel.id !== player.voiceChannel) {
-            return interaction.followUp({ content: 'Ты должен быть в том же голосовом канале!', ephemeral: true });
+        if (player.queue.size === 0) {
+            player.stop();
+            return interaction.reply('Трек пропущен (очередь пуста, плеер остановлен)');
         }
 
-        // Пропуск трека
-        player.stop();  // В riffy это пропускает к следующему
-
-        await interaction.followUp({
-            embeds: [new EmbedBuilder()
-                .setColor('#1db954')
-                .setDescription('Трек пропущен ⏭')
-            ]
-        });
+        player.skip();
+        await interaction.reply('Трек пропущен ⏭');
     }
 };

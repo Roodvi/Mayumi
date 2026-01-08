@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+
+lavalink:
+  server:
+    password: "ТВОЙ_СЛОЖНЫЙ_ПАРОЛЬ_ЗДЕСЬ"  # СМЕНИ НА РЕАЛЬНЫЙ! Сейчас placeholder — срочно исправь для безопасности
+    sources:
+      youtube: false
+      bandcamp: true
+      soundcloud: true
+      twitch: false
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+    playerUpdateInterval: 30
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+
+  plugins:
+    - dependency: dev.lavalink.youtube:youtube-plugin:1.16.0
+      repository: https://maven.lavalink.dev/releases
+      config:               # Добавляем этот блок для лучших клиентов
+        clients:
+          - MUSIC
+          - ANDROID
+          - WEB_REMIX
+          - ANDROID_VR
+          - WEB
+          - WEB_EMBEDDED_PLAYER
+
+metrics:
+  prometheus:
+    enabled: false
+
+sentry:
+  dsn: ""
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
+  file:
+    path: ./logs/

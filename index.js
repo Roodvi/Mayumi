@@ -3,9 +3,6 @@ const { token, nodes, embedColor, generateSongCard } = require('./config.json');
 const db = require('./db.js');
 const fs = require('node:fs');
 const path = require('node:path');
-const { getLang, getLangSync } = require('./utils/languageLoader.js');
-const colors = require('./UI/colors/colors');
-const { getLavalinkManager } = require('./lavalink.js');
 
 const client = new Client({
     intents: [
@@ -25,44 +22,6 @@ const client = new Client({
 
 client.commands = new Collection();
 
-client.on("clientReady", () => {
-    const lang = getLangSync();
-    console.log(`${colors.cyan}[ SYSTEM ]${colors.reset} ${colors.green}Клиент вошел в систему как ${client.user.tag}`);
-    console.log(`${colors.cyan}[ MUSIC ]${colors.reset} ${colors.green}Riffy Music System Ready`);
-
-    const nodeManager = getLavalinkManager();
-    console.log(nodeManager)
-    if (nodeManager) {
-        nodeManager.init(client.user.id);
-
-        setTimeout(() => {
-            const status = nodeManager.getNodeStatus();
-            const availableCount = nodeManager.getNodeCount();
-            const totalCount = nodeManager.getTotalNodeCount();
-
-            console.log(`${colors.cyan}[ LAVALINK ]${colors.reset} ${colors.green}${lang.console?.bot?.nodeManagerStatus?.replace('{available}', availableCount).replace('{total}', totalCount) || `Node Manager: ${availableCount}/${totalCount} nodes available`}${colors.reset}`);
-
-            if (status.nodes.length > 0) {
-                console.log(`${colors.cyan}[ LAVALINK ]${colors.reset} ${lang.console?.bot?.nodeStatus || 'Node Status:'}`);
-                for (const node of status.nodes) {
-                    const statusIcon = node.online ? `${colors.green}✅${colors.reset}` : `${colors.red}❌${colors.reset}`;
-                    const statusText = node.online ? 'ONLINE' : 'OFFLINE';
-                    const errorText = node.lastError ? ` | ${colors.yellow}${node.lastError}${colors.reset}` : '';
-                    const nodeInfo = lang.console?.bot?.nodeInfo?.replace('{icon}', statusIcon).replace('{name}', node.name).replace('{host}', node.host).replace('{port}', node.port).replace('{status}', statusText).replace('{error}', errorText) || `  ${statusIcon} ${colors.yellow}${node.name}${colors.reset} (${node.host}:${node.port}) - ${statusText}${errorText}`;
-                    console.log(nodeInfo);
-                }
-            }
-        }, 3000);
-    } else if (client.riffy) {
-        client.riffy.init(client.user.id);
-    }
-})
-
-client.on("raw", (d) => {
-    const { GatewayDispatchEvents } = require("discord.js");
-    if (![GatewayDispatchEvents.VoiceStateUpdate, GatewayDispatchEvents.VoiceServerUpdate].includes(d.t)) return;
-    client.riffy.updateVoiceState(d);
-});
 
 // === ЗАГРУЗКА КОМАНД ===
 
