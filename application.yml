@@ -1,10 +1,10 @@
 server:
   port: 8080
-  address: 0.0.0.0
+  address: localhost
 
 lavalink:
   server:
-    password: "ТВОЙ_СЛОЖНЫЙ_ПАРОЛЬ_ЗДЕСЬ"  # СМЕНИ НА РЕАЛЬНЫЙ! Сейчас placeholder — срочно исправь для безопасности
+    password: "youshallnotpass"  # СМЕНИ НА РЕАЛЬНЫЙ! Сейчас placeholder — срочно исправь для безопасности
     sources:
       youtube: false
       bandcamp: true

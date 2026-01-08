@@ -1,53 +1,64 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName('play')
-        .setDescription('Воспроизвести трек или плейлист')
-        .addStringOption(option =>
-            option.setName('query')
-                .setDescription('Название трека, YouTube/Spotify ссылка или поиск')
-                .setRequired(true)),
-    async execute(interaction) {
-        const client = interaction.client;
-        const manager = client.manager;
+  data: new SlashCommandBuilder()
+    .setName("play")
+    .setDescription("Проиграть музыку по названию или ссылке")
+    .addStringOption(option =>
+      option
+        .setName("query")
+        .setDescription("Название или ссылка")
+        .setRequired(true)
+    ),
 
-        if (!interaction.member.voice.channel) {
-            return interaction.reply({ content: 'Зайдите в голосовой канал!', ephemeral: true });
-        }
+  async execute(interaction) {
+    const query = interaction.options.getString("query", true);
 
-        await interaction.deferReply();
-
-        let player = manager.players.get(interaction.guild.id);
-
-        if (!player) {
-            player = manager.createPlayer({
-                guildId: interaction.guild.id,
-                voiceChannelId: interaction.member.voice.channel.id,
-                textChannelId: interaction.channel.id
-            });
-            player.connect();
-        }
-
-        const query = interaction.options.getString('query');
-
-        const res = await manager.search(query);
-
-        if (!res || res.loadType === 'LOAD_FAILED' || res.loadType === 'NO_MATCHES') {
-            return interaction.editReply('Трек не найден или ошибка загрузки.');
-        }
-
-        if (res.loadType === 'PLAYLIST_LOADED') {
-            player.queue.add(res.tracks);
-            await interaction.editReply(`Добавлен плейлист: **${res.playlist.name}** (${res.tracks.length} треков)`);
-        } else {
-            const track = res.tracks[0];
-            player.queue.add(track);
-            await interaction.editReply(`Добавлен трек: **${track.title}** от ${track.author}`);
-        }
-
-        if (!player.playing && !player.paused) {
-            player.play();
-        }
+    const voiceId = interaction.member?.voice?.channelId;
+    if (!voiceId) {
+      return interaction.reply({ content: "Зайди в голосовой канал.", ephemeral: true });
     }
+
+    await interaction.deferReply();
+
+    const riffy = interaction.client.riffy;
+
+    // На новых версиях Riffy: createConnection()
+    // На некоторых сборках может быть createPlayer()
+    const player =
+      riffy.players?.get(interaction.guildId) ??
+      (typeof riffy.createConnection === "function"
+        ? riffy.createConnection({
+            guildId: interaction.guildId,
+            voiceChannel: voiceId,
+            textChannel: interaction.channelId,
+            deaf: true,
+          })
+        : riffy.createPlayer(interaction.guildId, voiceId, interaction.channelId, true));
+
+    const result = await riffy.resolve({
+      query,
+      requester: interaction.user,
+    });
+
+    if (!result?.tracks?.length) {
+      return interaction.editReply("❌ Ничего не найдено");
+    }
+
+    const track = result.tracks[0];
+    track.info.requester = interaction.user;
+
+    player.queue.add(track);
+
+    // Если это createPlayer()-ветка
+    if (typeof player.connect === "function" && !player.connected) {
+      await player.connect();
+    }
+
+    if (!player.playing && !player.paused) {
+      await player.play();
+    }
+
+    return interaction.editReply(`🎶 Сейчас играет: **${track.info.title}**`);
+  },
 };

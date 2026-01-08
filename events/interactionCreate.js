@@ -37,7 +37,7 @@ module.exports = {
                 }
             })();
 
-            
+
 
             try {
                 await command.execute(interaction);
@@ -73,6 +73,7 @@ module.exports = {
                 console.error(`Ошибка при выполнении команды ${interaction.commandName}:`, error);
 
                 const serverName = interaction.guild ? `${interaction.guild.name} (${interaction.guild.id})` : 'Личные сообщения (DM)';
+                const stack = String(error?.stack || error).slice(0, 900);
 
                 const errorEmbed = new EmbedBuilder()
                     .setColor(0xFF0000) // Красный для ошибки
@@ -81,7 +82,7 @@ module.exports = {
                         { name: 'Команда', value: `/${interaction.commandName}`, inline: false },
                         { name: 'Пользователь', value: `${interaction.user.tag} (${interaction.user.id})`, inline: false },
                         { name: 'Сервер', value: serverName, inline: false },
-                        { name: 'Ошибка', value: `\`\`\`${error.stack || error.message || 'Нет деталей'}\`\`\``, inline: false }
+                        { name: 'Ошибка', value: `\`\`\`${stack || error.message || 'Нет деталей'}\`\`\``, inline: false }
                     )
                     .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
                     .setTimestamp();

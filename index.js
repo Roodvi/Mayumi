@@ -1,8 +1,9 @@
-const { Client, GatewayIntentBits, Collection, ChannelType, PermissionsBitField, Partials, EmbedBuilder } = require('discord.js');
-const { token, nodes, embedColor, generateSongCard } = require('./config.json');
+const { Client, GatewayIntentBits, Collection, ChannelType, PermissionsBitField, Partials, EmbedBuilder, GatewayDispatchEvents } = require('discord.js');
+const { token, embedColor, generateSongCard } = require('./config.json');
 const db = require('./db.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const { Riffy } = require("riffy");
 
 const client = new Client({
     intents: [
@@ -22,6 +23,35 @@ const client = new Client({
 
 client.commands = new Collection();
 
+
+// Настройки Lavalink ноды
+const nodes = [
+    {
+        host: "0.0.0.0",
+        port: 8080,
+        password: "youshallnotpass",
+        secure: false,
+    },
+];
+
+client.riffy = new Riffy(client, nodes, {
+    send: (payload) => {
+        const guild = client.guilds.cache.get(payload.d.guild_id);
+        if (guild) guild.shard.send(payload);
+    },
+    defaultSearchPlatform: "ytmsearch",
+    restVersion: "v4"
+});
+
+client.on("raw", (d) => {
+    if (![GatewayDispatchEvents.VoiceStateUpdate, GatewayDispatchEvents.VoiceServerUpdate].includes(d.t)) return;
+    client.riffy.updateVoiceState(d);
+});
+
+client.once("ready", () => {
+    client.riffy.init(client.user.id);
+    console.log("🟢 RIFFY INIT OK");
+});
 
 // === ЗАГРУЗКА КОМАНД ===
 
