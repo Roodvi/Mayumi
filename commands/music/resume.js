@@ -2,11 +2,11 @@ const { SlashCommandBuilder, MessageFlags } = require("discord.js");
 const { getPlayer } = require("../../utils/music.js");
 
 module.exports = {
-  data: new SlashCommandBuilder().setName("stop").setDescription("Остановить и очистить"),
+  data: new SlashCommandBuilder().setName("resume").setDescription("Продолжить"),
   async execute(interaction) {
     const player = getPlayer(interaction.client, interaction.guildId);
     if (!player) return interaction.reply({ content: "❌ Ничего не играет.", flags: MessageFlags.Ephemeral });
-    player.destroy();
-    return interaction.reply("⏹️ Остановлено.");
+    player.pause(false);
+    return interaction.reply("▶️ Продолжаю.");
   },
 };

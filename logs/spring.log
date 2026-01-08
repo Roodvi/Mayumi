@@ -597,3 +597,907 @@ java.net.SocketException: Connection reset
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
+2026-01-08T18:51:17.821+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T18:51:18.187+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T18:51:18.189+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T18:51:18.196+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/36orragkz9dzmxwv/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T18:51:34.383+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-3] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T18:53:57.646+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-6] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T18:56:09.595+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-8] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T18:56:53.726+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:49739 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 36orragkz9dzmxwv
+2026-01-08T18:56:59.313+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59188
+2026-01-08T18:56:59.313+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T18:56:59.315+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T18:56:59.327+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T18:56:59.329+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/knmylwvspoukndfs, payload={"resuming":true,"timeout":60}
+2026-01-08T18:57:00.270+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59188 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id knmylwvspoukndfs
+2026-01-08T18:57:51.589+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-4] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T18:57:53.727+05:00  INFO 6752 --- [Lavalink] [pool-7-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T18:58:00.281+05:00  INFO 6752 --- [Lavalink] [pool-8-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T18:58:10.260+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59222
+2026-01-08T18:58:10.261+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T18:58:10.263+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T18:58:10.272+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T18:58:10.278+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/i9vtwwd9b569a6pc, payload={"resuming":true,"timeout":60}
+2026-01-08T18:58:19.745+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T18:58:20.204+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T18:58:20.205+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:00:31.641+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59222 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id i9vtwwd9b569a6pc
+2026-01-08T19:00:35.900+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63325
+2026-01-08T19:00:35.902+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:00:35.903+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:00:35.913+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:00:35.917+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ai78gtr4zbd9o642, payload={"resuming":true,"timeout":60}
+2026-01-08T19:00:38.295+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ai78gtr4zbd9o642/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"d7c5308dd7be75f7df00cc79557a483b","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"30313c606b07590a"},"volume":100}
+2026-01-08T19:01:13.865+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:63325 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id ai78gtr4zbd9o642
+2026-01-08T19:01:30.244+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63355
+2026-01-08T19:01:30.245+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:01:30.248+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:01:30.257+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:01:30.260+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/4682a0j35wsky2fx, payload={"resuming":true,"timeout":60}
+2026-01-08T19:01:31.650+05:00  INFO 6752 --- [Lavalink] [pool-9-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:01:32.204+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:01:32.551+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:01:32.554+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:01:32.729+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/4682a0j35wsky2fx/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"aff81d68051ea8220e8064195e1e9975","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"30313c606b07590a"},"volume":100}
+2026-01-08T19:01:32.740+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/4682a0j35wsky2fx/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:01:43.411+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:63355 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 4682a0j35wsky2fx
+2026-01-08T19:02:13.877+05:00  INFO 6752 --- [Lavalink] [pool-10-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:02:32.442+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63378
+2026-01-08T19:02:32.443+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:02:32.445+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:02:32.455+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:02:32.458+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9, payload={"resuming":true,"timeout":60}
+2026-01-08T19:02:36.061+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:02:36.427+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:02:36.428+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:02:36.602+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"bd18a36b03ac3937e22deb53b28acba2","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"c62e126a390814d9"},"volume":100}
+2026-01-08T19:02:36.610+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:02:40.111+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"paused":true}
+2026-01-08T19:02:43.231+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"paused":false}
+2026-01-08T19:02:43.413+05:00  INFO 6752 --- [Lavalink] [pool-11-thread-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2026-01-08T19:02:47.511+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":110}
+2026-01-08T19:02:47.538+05:00  INFO 6752 --- [Lavalink] [lava-daemon-pool-playback-1-thread-2] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: loading with filter com.sedmelluq.discord.lavaplayer.natives.ConnectorNativeLibLoader$$Lambda$1054/0x0000025d2c865cd8@7b5a774d
+2026-01-08T19:02:47.548+05:00  INFO 6752 --- [Lavalink] [lava-daemon-pool-playback-1-thread-2] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: successfully loaded.
+2026-01-08T19:02:47.548+05:00  INFO 6752 --- [Lavalink] [lava-daemon-pool-playback-1-thread-2] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: loading with filter null
+2026-01-08T19:02:47.570+05:00  INFO 6752 --- [Lavalink] [lava-daemon-pool-playback-1-thread-2] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: successfully loaded.
+2026-01-08T19:02:49.811+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":120}
+2026-01-08T19:02:52.421+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":130}
+2026-01-08T19:02:53.898+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":140}
+2026-01-08T19:02:56.998+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":130}
+2026-01-08T19:02:59.064+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":120}
+2026-01-08T19:03:00.269+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":110}
+2026-01-08T19:03:01.677+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513?noReplace=false, payload={"volume":100}
+2026-01-08T19:03:20.076+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/m6tq4dcmjeh3xdr9/players/627432407108288513
+2026-01-08T19:05:55.151+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:63378 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id m6tq4dcmjeh3xdr9
+2026-01-08T19:05:59.218+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:49814
+2026-01-08T19:05:59.219+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:05:59.220+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:05:59.229+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:05:59.231+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0uanlkcuu7dp8a2s, payload={"resuming":true,"timeout":60}
+2026-01-08T19:06:01.261+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:06:01.597+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:06:01.599+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:06:01.803+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0uanlkcuu7dp8a2s/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"13b75f2a7b8d7c618cf09a66354cda15","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"bdad6e7132e7506e"},"volume":100}
+2026-01-08T19:06:01.816+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0uanlkcuu7dp8a2s/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:06:55.167+05:00  INFO 6752 --- [Lavalink] [pool-12-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:07:16.048+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-10] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:07:53.267+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:49814 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 0uanlkcuu7dp8a2s
+2026-01-08T19:07:57.902+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:49859
+2026-01-08T19:07:57.903+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:07:57.903+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:07:57.916+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:07:57.919+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/j82bbmx0dr5sry6m, payload={"resuming":true,"timeout":60}
+2026-01-08T19:08:03.139+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:08:03.467+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:08:03.469+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:08:03.684+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/j82bbmx0dr5sry6m/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"0c5a646efb33b0bb3aa359f371f12aa5","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"5926e9d41da0527c"},"volume":100}
+2026-01-08T19:08:03.697+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/j82bbmx0dr5sry6m/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:08:53.276+05:00  INFO 6752 --- [Lavalink] [pool-13-thread-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2026-01-08T19:09:12.925+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:49859 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id j82bbmx0dr5sry6m
+2026-01-08T19:09:17.942+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-3] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:09:20.175+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55748
+2026-01-08T19:09:20.177+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:09:20.184+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:09:20.191+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:09:20.199+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/jscipxk0oq24q7v6, payload={"resuming":true,"timeout":60}
+2026-01-08T19:09:22.563+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:09:22.993+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:09:22.994+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:09:23.083+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/jscipxk0oq24q7v6/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"20fb7fa497c53d7d8fb9fc79ffb4de0b","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"907caba67fe98db7"},"volume":100}
+2026-01-08T19:09:23.092+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/jscipxk0oq24q7v6/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:10:12.933+05:00  INFO 6752 --- [Lavalink] [pool-14-thread-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2026-01-08T19:10:37.351+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-7] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:10:58.801+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55748 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id jscipxk0oq24q7v6
+2026-01-08T19:11:09.212+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:61058
+2026-01-08T19:11:09.213+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:11:09.214+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:11:09.224+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:11:09.226+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ledfq3dj0qk7ap61, payload={"resuming":true,"timeout":60}
+2026-01-08T19:11:10.576+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:Te Molla"
+2026-01-08T19:11:10.932+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: Te Molla
+2026-01-08T19:11:10.934+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3ATe%20Molla
+2026-01-08T19:11:11.121+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ledfq3dj0qk7ap61/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"61b7eb31a0c1f3609d8b25d1d00e0c83","endpoint":"c-ams21-7c4ac553.discord.media:8443","token":"d65bab94fedb59b3"},"volume":100}
+2026-01-08T19:11:11.133+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ledfq3dj0qk7ap61/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAeAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAAVBcm5vbgAAAAAAAr8gAAtSZGpUNXRjZHdfbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVJkalQ1dGNkd19vAAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T19:11:58.805+05:00  INFO 6752 --- [Lavalink] [pool-15-thread-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2026-01-08T19:12:25.366+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-3] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:14:31.468+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-10] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:16:27.245+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-5] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:16:49.092+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:61058 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id ledfq3dj0qk7ap61
+2026-01-08T19:17:03.047+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:52990
+2026-01-08T19:17:03.059+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:17:03.061+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:17:03.076+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:17:03.080+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/27sq0rsgmk7bmmao, payload={"resuming":true,"timeout":60}
+2026-01-08T19:17:49.103+05:00  INFO 6752 --- [Lavalink] [pool-16-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:19:19.257+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:52990 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 27sq0rsgmk7bmmao
+2026-01-08T19:19:25.777+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60799
+2026-01-08T19:19:25.778+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:19:25.780+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:19:25.839+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/urkrntpvgs8w1qct, payload={"resuming":true,"timeout":60}
+2026-01-08T19:19:25.845+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:19:41.546+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:19:41.987+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:19:41.988+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:19:47.796+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T19:19:48.091+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T19:19:48.099+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T19:19:48.386+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/urkrntpvgs8w1qct/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"3fa7df18b9904348446a834d56aaf191","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"a6146e857271c8fa"},"volume":100}
+2026-01-08T19:19:48.396+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/urkrntpvgs8w1qct/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:20:19.259+05:00  INFO 6752 --- [Lavalink] [pool-17-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:21:05.055+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-10] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:23:07.659+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-10] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:25:03.407+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-9] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:27:26.728+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-7] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:28:43.861+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60799 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id urkrntpvgs8w1qct
+2026-01-08T19:28:47.561+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58522
+2026-01-08T19:28:47.563+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:28:47.564+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:28:47.573+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:28:47.575+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/xuvacnqb0fikfw2b, payload={"resuming":true,"timeout":60}
+2026-01-08T19:28:59.621+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:29:00.547+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:29:00.548+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:29:03.280+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T19:29:03.574+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T19:29:03.574+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T19:29:03.857+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/xuvacnqb0fikfw2b/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"d4b684bc1b0d53598a808a108eeb8fdc","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"b381bc4b9e6a6074"},"volume":100}
+2026-01-08T19:29:03.864+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/xuvacnqb0fikfw2b/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:29:08.737+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-7] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:29:19.610+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/xuvacnqb0fikfw2b/players/627432407108288513?noReplace=false, payload={"paused":false}
+2026-01-08T19:29:43.874+05:00  INFO 6752 --- [Lavalink] [pool-18-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:29:50.640+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-2] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:31:05.123+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-9] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:32:47.111+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-4] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:33:52.798+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58522 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id xuvacnqb0fikfw2b
+2026-01-08T19:33:58.184+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:62296
+2026-01-08T19:33:58.186+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:33:58.186+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:33:58.195+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:33:58.198+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/8v3var7ebmfzdtox, payload={"resuming":true,"timeout":60}
+2026-01-08T19:34:02.627+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:34:03.332+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:34:03.336+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:34:05.710+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T19:34:05.945+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T19:34:05.950+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T19:34:06.271+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/8v3var7ebmfzdtox/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"a810bcb31c488e75a56cc006cee542ad","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"b381bc4b9e6a6074"},"volume":100}
+2026-01-08T19:34:06.279+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/8v3var7ebmfzdtox/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:34:52.814+05:00  INFO 6752 --- [Lavalink] [pool-19-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:35:20.500+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-8] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:37:16.415+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/8v3var7ebmfzdtox/players/627432407108288513
+2026-01-08T19:38:24.531+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:62296 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 8v3var7ebmfzdtox
+2026-01-08T19:39:24.542+05:00  INFO 6752 --- [Lavalink] [pool-20-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:45:27.003+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53484
+2026-01-08T19:45:27.004+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:45:27.006+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:45:27.018+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:45:27.020+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/u1r3dhc4eyhuosfj, payload={"resuming":true,"timeout":60}
+2026-01-08T19:45:34.841+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te"
+2026-01-08T19:45:34.907+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te m"
+2026-01-08T19:45:35.517+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe
+2026-01-08T19:45:35.520+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://open.spotify.com/track/ytsearch:Te"
+2026-01-08T19:45:35.677+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te m
+2026-01-08T19:45:35.680+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20m
+2026-01-08T19:45:36.303+05:00 ERROR 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Failed to load track for identifier https://open.spotify.com/track/ytsearch:Te
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+	at lavalink.server.util.LoadingKt.loadAudioItem(loading.kt:20) ~[classes!/:4.1.2]
+	at lavalink.server.player.AudioLoaderRestHandler.loadTracks(AudioLoaderRestHandler.kt:59) ~[classes!/:4.1.2]
+	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97) ~[kotlin-reflect-2.1.20.jar!/:2.1.20-release-217]
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113) ~[kotlin-reflect-2.1.20.jar!/:2.1.20-release-217]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207) ~[kotlin-reflect-2.1.20.jar!/:2.1.20-release-217]
+	at kotlin.reflect.jvm.internal.KCallableImpl.callBy(KCallableImpl.kt:112) ~[kotlin-reflect-2.1.20.jar!/:2.1.20-release-217]
+	at org.springframework.web.method.support.InvocableHandlerMethod$KotlinDelegate.invokeFunction(InvocableHandlerMethod.java:334) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:527) ~[jakarta.servlet-api-6.0.0.jar!/:6.0.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar!/:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:614) ~[jakarta.servlet-api-6.0.0.jar!/:6.0.0]
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:289) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at lavalink.server.io.ResponseHeaderFilter.doFilterInternal(ResponseHeaderFilter.kt:17) ~[classes!/:4.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar!/:6.1.15]
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101) ~[undertow-servlet-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:859) ~[undertow-core-2.3.13.Final.jar!/:2.3.13.Final]
+	at org.jboss.threads.ContextHandler$1.runWith(ContextHandler.java:18) ~[jboss-threads-3.5.0.Final.jar!/:3.5.0.Final]
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513) ~[jboss-threads-3.5.0.Final.jar!/:3.5.0.Final]
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538) ~[jboss-threads-3.5.0.Final.jar!/:3.5.0.Final]
+	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282) ~[xnio-api-3.8.8.Final.jar!/:3.8.8.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Unknown file format.
+	at com.sedmelluq.discord.lavaplayer.source.ProbingAudioSourceManager.handleLoadResult(ProbingAudioSourceManager.java:35) ~[lavaplayer-2.2.6.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:73) ~[lavaplayer-2.2.6.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:442) ~[lavaplayer-2.2.6.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:423) ~[lavaplayer-2.2.6.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.loadItemSync(DefaultAudioPlayerManager.java:154) ~[lavaplayer-2.2.6.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager.loadItemSync(AudioPlayerManager.java:127) ~[lavaplayer-2.2.6.jar!/:na]
+	at lavalink.server.util.LoadingKt.loadAudioItem(loading.kt:15) ~[classes!/:4.1.2]
+	... 66 common frames omitted
+
+2026-01-08T19:45:36.313+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https://open.spotify.com/track/ytsearch:Te
+2026-01-08T19:45:36.664+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:45:37.104+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:45:37.107+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:45:38.687+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=FCid7Mnd6D8"
+2026-01-08T19:45:38.930+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla
+2026-01-08T19:45:38.930+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DFCid7Mnd6D8
+2026-01-08T19:45:39.245+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/u1r3dhc4eyhuosfj/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"642fcc2c0683b42fa7925eacc2bde728","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"33a92a8cfe78e627"},"volume":100}
+2026-01-08T19:45:39.252+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/u1r3dhc4eyhuosfj/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAcwMACFRlIE1vbGxhAA9NYXR0ZW5kIC0gVG9waWMAAAAAAAIi4AALRkNpZDdNbmQ2RDgAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1GQ2lkN01uZDZEOAAAAAd5b3V0dWJlAAAAAAAAAAA="}}
+2026-01-08T19:47:07.241+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-1] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:49:16.731+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-2] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:49:46.686+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53484 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id u1r3dhc4eyhuosfj
+2026-01-08T19:49:54.015+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55974
+2026-01-08T19:49:54.015+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:49:54.018+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:49:54.028+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:49:54.031+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/1x1zy3w1ooh4loiw, payload={"resuming":true,"timeout":60}
+2026-01-08T19:50:07.377+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Музыка 5 секунд"
+2026-01-08T19:50:08.260+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Музыка 5 секунд
+2026-01-08T19:50:08.262+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3A%D0%9C%D1%83%D0%B7%D1%8B%D0%BA%D0%B0%205%20%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4
+2026-01-08T19:50:11.273+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Uhlf-fs8qAA"
+2026-01-08T19:50:11.535+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track 5 секунд
+2026-01-08T19:50:11.536+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DUhlf-fs8qAA
+2026-01-08T19:50:11.807+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/1x1zy3w1ooh4loiw/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"7b70f6365887e4d5e162475b1e036ddd","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"2be652db07a357c2"},"volume":100}
+2026-01-08T19:50:11.816+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/1x1zy3w1ooh4loiw/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAegMADjUg0YHQtdC60YPQvdC0ABBMaWJlbnNvbiAtIFRvcGljAAAAAAADODgAC1VobGYtZnM4cUFBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VWhsZi1mczhxQUEAAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:50:17.071+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/1x1zy3w1ooh4loiw/players/627432407108288513?noReplace=false, payload={"track":{"encoded":null}}
+2026-01-08T19:50:27.084+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/1x1zy3w1ooh4loiw/players/627432407108288513
+2026-01-08T19:50:46.696+05:00  INFO 6752 --- [Lavalink] [pool-21-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:51:59.820+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55974 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 1x1zy3w1ooh4loiw
+2026-01-08T19:52:04.619+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56024
+2026-01-08T19:52:04.620+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:52:04.621+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:52:04.635+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:52:04.636+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/fsfergcq2xdf4v5r, payload={"resuming":true,"timeout":60}
+2026-01-08T19:52:10.065+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:52:10.114+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Mollaa"
+2026-01-08T19:52:10.546+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:52:10.549+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:52:11.036+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Mollaa
+2026-01-08T19:52:11.036+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Mollaa
+2026-01-08T19:52:13.168+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T19:52:13.318+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T19:52:13.319+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T19:52:13.723+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/fsfergcq2xdf4v5r/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"0474c37232df1ffbfebbf4e9898c5e11","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"b43069258b34a8a8"},"volume":100}
+2026-01-08T19:52:13.732+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/fsfergcq2xdf4v5r/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:52:59.826+05:00  INFO 6752 --- [Lavalink] [pool-22-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T19:53:16.789+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56024 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id fsfergcq2xdf4v5r
+2026-01-08T19:53:21.384+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56063
+2026-01-08T19:53:21.385+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T19:53:21.386+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T19:53:21.397+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T19:53:21.400+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ifzvhzzncmm412l1, payload={"resuming":true,"timeout":60}
+2026-01-08T19:53:27.960+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-8] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:53:28.006+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T19:53:28.466+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T19:53:28.466+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T19:53:42.366+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=4xfMtUVbAkI"
+2026-01-08T19:53:42.523+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track TE MOLLA (SUPER SLOWED)
+2026-01-08T19:53:42.523+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4xfMtUVbAkI
+2026-01-08T19:53:42.891+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ifzvhzzncmm412l1/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"d76d890791613b830c24309aa38a389a","endpoint":"c-ams08-8fef472a.discord.media:2096","token":"e9a0b6f37e2bd022"},"volume":100}
+2026-01-08T19:53:42.900+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ifzvhzzncmm412l1/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RFIE1PTExBIChTVVBFUiBTTE9XRUQpAA1CTFZLWiAtIFRvcGljAAAAAAACB4gACzR4Zk10VVZiQWtJAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9NHhmTXRVVmJBa0kAAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T19:54:16.795+05:00  INFO 6752 --- [Lavalink] [pool-23-thread-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2026-01-08T19:55:24.659+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-1] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T19:56:06.536+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/ifzvhzzncmm412l1/players/627432407108288513
+2026-01-08T20:05:13.199+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56063 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id ifzvhzzncmm412l1
+2026-01-08T20:05:21.014+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:64333
+2026-01-08T20:05:21.015+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T20:05:21.016+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T20:05:21.025+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T20:05:21.028+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/kgb4ljmgu8c887sj, payload={"resuming":true,"timeout":60}
+2026-01-08T20:05:37.299+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T20:05:38.179+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T20:05:38.180+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T20:05:40.794+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T20:05:41.092+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T20:05:41.094+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T20:05:41.325+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/kgb4ljmgu8c887sj/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"203d479f0a6bd5f495d4f9d18de3598d","endpoint":"c-ams13-90b345bb.discord.media:2053","token":"5ec62bbc79aac2ba"},"volume":100}
+2026-01-08T20:05:41.333+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/kgb4ljmgu8c887sj/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T20:06:13.200+05:00  INFO 6752 --- [Lavalink] [pool-24-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T20:07:09.323+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-8] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:08:41.547+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Arnon - Topic - Te Molla (2019 Version)"
+2026-01-08T20:08:42.103+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Arnon - Topic - Te Molla (2019 Version)
+2026-01-08T20:08:42.104+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3AArnon%20-%20Topic%20-%20Te%20Molla%20(2019%20Version)
+2026-01-08T20:08:42.110+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/kgb4ljmgu8c887sj/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAfAMAFVRlIE1vbGxhICgyMDE5IFJlbWl4KQALQmxhc3RlcmphenoAAAAAAAKMWAALT21mVVB1d294WEkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PbWZVUHV3b3hYSQAAAAd5b3V0dWJlAAAAAAAAAAA="}}
+2026-01-08T20:09:18.815+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-10] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:11:28.297+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-8] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:11:29.609+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Blasterjazz - Te Molla (2019 Remix)"
+2026-01-08T20:11:30.167+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Blasterjazz - Te Molla (2019 Remix)
+2026-01-08T20:11:30.169+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ABlasterjazz%20-%20Te%20Molla%20(2019%20Remix)
+2026-01-08T20:11:30.175+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/kgb4ljmgu8c887sj/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAaQMACFRlIE1vbGxhAAVBcm5vbgAAAAAAAv2gAAtuWlFjUUxQWjlZOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW5aUWNRTFBaOVk4AAAAB3lvdXR1YmUAAAAAAAAAAA=="}}
+2026-01-08T20:13:24.050+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-3] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:13:56.662+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:64333 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id kgb4ljmgu8c887sj
+2026-01-08T20:14:02.978+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:52950
+2026-01-08T20:14:02.978+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T20:14:02.980+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T20:14:02.990+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T20:14:02.992+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0hwcwoldxqzgfz73, payload={"resuming":true,"timeout":60}
+2026-01-08T20:14:14.399+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te M"
+2026-01-08T20:14:14.909+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te M
+2026-01-08T20:14:14.911+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20M
+2026-01-08T20:14:15.795+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Mollaa"
+2026-01-08T20:14:16.260+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Molla"
+2026-01-08T20:14:16.270+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Te Mo"
+2026-01-08T20:14:16.282+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Mollaa
+2026-01-08T20:14:16.283+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Mollaa
+2026-01-08T20:14:16.978+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Molla
+2026-01-08T20:14:16.979+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Molla
+2026-01-08T20:14:17.090+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Te Mo
+2026-01-08T20:14:17.092+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3ATe%20Mo
+2026-01-08T20:14:20.116+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=RdjT5tcdw_o"
+2026-01-08T20:14:20.261+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Loaded track Te Molla (2019 Version)
+2026-01-08T20:14:20.262+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRdjT5tcdw_o
+2026-01-08T20:14:20.655+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0hwcwoldxqzgfz73/players/627432407108288513?noReplace=false, payload={"voice":{"sessionId":"7d39aa0ca86832773955c41b4ba46222","endpoint":"c-ams13-90b345bb.discord.media:2053","token":"d7fdb22dd34b7c98"},"volume":100}
+2026-01-08T20:14:20.661+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0hwcwoldxqzgfz73/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAgAMAF1RlIE1vbGxhICgyMDE5IFZlcnNpb24pAA1Bcm5vbiAtIFRvcGljAAAAAAACuzgAC1JkalQ1dGNkd19vAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9UmRqVDV0Y2R3X28AAAAHeW91dHViZQAAAAAAAAAA"}}
+2026-01-08T20:14:56.673+05:00  INFO 6752 --- [Lavalink] [pool-25-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2026-01-08T20:15:48.645+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-1] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:17:21.285+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:ytsearch:Arnon - Topic - Te Molla (2019 Version)"
+2026-01-08T20:17:21.803+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: ytsearch:Arnon - Topic - Te Molla (2019 Version)
+2026-01-08T20:17:21.804+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch%3Aytsearch%3AArnon%20-%20Topic%20-%20Te%20Molla%20(2019%20Version)
+2026-01-08T20:17:21.808+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/0hwcwoldxqzgfz73/players/627432407108288513?noReplace=false, payload={"track":{"encoded":"QAAAfAMAFVRlIE1vbGxhICgyMDE5IFJlbWl4KQALQmxhc3RlcmphenoAAAAAAAKMWAALT21mVVB1d294WEkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1PbWZVUHV3b3hYSQAAAAd5b3V0dWJlAAAAAAAAAAA="}}
+2026-01-08T20:17:58.143+05:00 ERROR 6752 --- [Lavalink] [nioEventLoopGroup-2-5] lavalink.server.io.SocketContext         : Koe encountered a voice gateway exception for guild 627432407108288513
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar!/:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2026-01-08T20:18:01.684+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/0hwcwoldxqzgfz73/players/627432407108288513
+2026-01-08T20:30:26.113+05:00  INFO 6752 --- [Lavalink] [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:52950 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with id 0hwcwoldxqzgfz73
+2026-01-08T20:30:33.053+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63677
+2026-01-08T20:30:33.054+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : GET /v4/websocket
+2026-01-08T20:30:33.055+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from Riffy/1.0.11
+2026-01-08T20:30:33.073+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-4] l.server.io.RequestLoggingFilter         : GET /v4/info
+2026-01-08T20:30:33.084+05:00  INFO 6752 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/ddqa6blcw8cidlvp, payload={"resuming":true,"timeout":60}

@@ -7,6 +7,89 @@ module.exports = {
     name: 'interactionCreate',
     execute(interaction, client,) {
         (async () => {
+            if (interaction.isModalSubmit() && interaction.customId.startsWith("help_feedback_modal:")) {
+                try {
+                    // === ВСТАВЬ СЮДА ID КАНАЛА ===
+                    const FEEDBACK_CHANNEL_ID = "ВСТАВЬ_ID_КАНАЛА_СЮДА";
+
+                    // === (ОПЦИОНАЛЬНО) ВСТАВЬ СЮДА ID РОЛИ ДЛЯ ПИНГА, ИЛИ ОСТАВЬ null ===
+                    const FEEDBACK_PING_ROLE_ID = null; // например "123456789012345678"
+
+                    const type = interaction.customId.split(":")[1] || "unknown";
+                    const subject = interaction.fields.getTextInputValue("subject");
+                    const details = interaction.fields.getTextInputValue("details");
+
+                    // простая защита от спама (кд 30 сек)
+                    if (!interaction.client.feedbackCooldown) interaction.client.feedbackCooldown = new Map();
+                    const cdKey = `${interaction.guildId}:${interaction.user.id}`;
+                    const last = interaction.client.feedbackCooldown.get(cdKey) || 0;
+                    if (Date.now() - last < 30_000) {
+                        return interaction.reply({
+                            content: "⏳ Подожди немного перед отправкой следующего фидбека (30 сек).",
+                            flags: MessageFlags.Ephemeral,
+                        });
+                    }
+                    interaction.client.feedbackCooldown.set(cdKey, Date.now());
+
+                    const typeTitle = {
+                        bug: "⚠️ Баг",
+                        question: "❓ Вопрос",
+                        suggestion: "💡 Предложение",
+                        dislike: "👎 Не нравится",
+                        like: "👍 Нравится",
+                    }[type] || "📩 Фидбек";
+
+                    const embed = new EmbedBuilder()
+                        .setTitle(`${typeTitle}: ${subject}`.slice(0, 256))
+                        .setDescription(details.slice(0, 4000))
+                        .addFields(
+                            { name: "От кого", value: `${interaction.user.tag} (${interaction.user.id})`, inline: false },
+                            { name: "Сервер", value: `${interaction.guild?.name || "Unknown"} (${interaction.guildId})`, inline: false },
+                            { name: "Канал", value: `<#${interaction.channelId}>`, inline: true },
+                        )
+                        .setTimestamp(Date.now());
+
+                    const channel = await interaction.client.channels.fetch(FEEDBACK_CHANNEL_ID).catch(() => null);
+                    if (!channel) {
+                        return interaction.reply({
+                            content: "❌ Канал для фидбека не найден. Проверь ID в коде.",
+                            flags: MessageFlags.Ephemeral,
+                        });
+                    }
+
+                    const ping = FEEDBACK_PING_ROLE_ID ? `<@&${FEEDBACK_PING_ROLE_ID}>` : null;
+
+                    await channel.send({
+                        content: ping || undefined,
+                        embeds: [embed],
+                    });
+
+                    return interaction.reply({
+                        content: "✅ Спасибо! Фидбек отправлен.",
+                        flags: MessageFlags.Ephemeral,
+                    });
+                } catch (e) {
+                    console.error("Help feedback modal error:", e);
+                    return interaction.reply({
+                        content: "❌ Не удалось отправить фидбек. Проверь права бота и ID канала.",
+                        flags: MessageFlags.Ephemeral,
+                    }).catch(() => { });
+                }
+            }
+
+
+            // ✅ Autocomplete support
+            if (interaction.isAutocomplete()) {
+                const command = client.commands.get(interaction.commandName);
+                if (!command || typeof command.autocomplete !== "function") return;
+                try {
+                    await command.autocomplete(interaction);
+                } catch (e) {
+                    console.error("Autocomplete error:", e);
+                }
+                return;
+            }
+
             if (!interaction.isChatInputCommand()) return;
 
             const command = client.commands.get(interaction.commandName);

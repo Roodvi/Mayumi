@@ -53,6 +53,94 @@ client.once("ready", () => {
     console.log("🟢 RIFFY INIT OK");
 });
 
+
+// === AUTOPLAY (in-memory) ===
+// /autoplay mode:on|off включает автоподбор похожих треков, когда очередь заканчивается.
+
+client.autoplayGuilds = client.autoplayGuilds || new Map();  // guildId -> boolean
+client.lastTrackInfo = client.lastTrackInfo || new Map();    // guildId -> { title, author, uri, identifier }
+client.autoplayLocks = client.autoplayLocks || new Set();    // guildId lock (anti-spam)
+
+async function enqueueAutoplay(player) {
+    const guildId = player.guildId;
+
+    // включено ли autoplay на сервере
+    if (!client.autoplayGuilds.get(guildId)) return;
+
+    // если уже есть что играть — не трогаем
+    if (player.playing || player.paused) return;
+    if (player.queue && player.queue.length > 0) return;
+
+    // анти-спам защита (чтобы не делать 10 resolve подряд)
+    if (client.autoplayLocks.has(guildId)) return;
+    client.autoplayLocks.add(guildId);
+
+    try {
+        const last = client.lastTrackInfo.get(guildId);
+        if (!last) return;
+
+        const title = String(last.title || "").trim();
+        const author = String(last.author || "").trim();
+
+        // стабильный вариант: ytsearch
+        const q = `ytsearch:${(author ? author + " - " : "") + title}`.slice(0, 200);
+
+        const res = await client.riffy.resolve({
+            query: q,
+            requester: client.user, // requester можно ботом
+        });
+
+        const tracks = res?.tracks || [];
+        if (!tracks.length) return;
+
+        // выбираем первый трек, который не совпадает с прошлым
+        const picked = tracks.find(t => {
+            const uri = t?.info?.uri;
+            if (!uri || typeof uri !== "string") return false;
+            if (last.uri && uri === last.uri) return false;
+            if (last.identifier && t.info?.identifier && t.info.identifier === last.identifier) return false;
+            return true;
+        }) || tracks[0];
+
+        picked.info.requester = client.user;
+        player.queue.add(picked);
+
+        if (!player.playing && !player.paused) {
+            await player.play();
+        }
+    } catch (e) {
+        console.error("Autoplay error:", e);
+    } finally {
+        setTimeout(() => client.autoplayLocks.delete(guildId), 2000);
+    }
+}
+
+// Сохраняем последний трек (по нему будем искать похожее)
+client.riffy.on("trackStart", (player) => {
+    try {
+        const info = player.current?.info;
+        if (!info) return;
+        client.lastTrackInfo.set(player.guildId, {
+            title: info.title,
+            author: info.author,
+            uri: info.uri,
+            identifier: info.identifier,
+        });
+    } catch {}
+});
+
+// Когда трек закончился и очередь пустая — добавляем autoplay
+client.riffy.on("trackEnd", (player) => {
+    try {
+        if (!player.queue || player.queue.length === 0) enqueueAutoplay(player);
+    } catch {}
+});
+
+// Некоторые сборки шлют queueEnd — тоже используем
+client.riffy.on("queueEnd", (player) => {
+    try { enqueueAutoplay(player); } catch {}
+});
+
 // === ЗАГРУЗКА КОМАНД ===
 
 client.on('interactionCreate', async modalInteraction => {
